@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Services - CarePlus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f8f7;
+        }
+
+        .navbar {
+            background: #16423c;
+            padding: 15px 25px;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .navbar-nav {
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: #d9eeeb !important;
+        }
+
+        .nav-link:hover {
+            color: white !important;
+        }
+
+        .navbar-toggler {
+            background: white;
+        }
+
+        .page-header {
+            margin-top: 45px;
+            background: #dcefeb;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: #16423c;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 70px 20px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 35px;
+            text-align: center;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-card i {
+            font-size: 50px;
+            color: #36a58c;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        footer {
+            background: #16423c;
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #d9eeeb;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            font-size: 23px;
+            margin-right: 12px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="index.html">CarePlus</a>
+
+        <button class="navbar-toggler"
+                type="button"
+                onclick="toggleMenu()">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navLinks">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Medicines</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="order.html">Order</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">Cart</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="reviews.html">Reviews</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<section class="page-header">
+
+    <h1>Our Services</h1>
+
+    <p>
+        Healthcare support and everyday wellness services.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4">
+
+                <div class="service-card">
+
+                    <img src="delivery.jpg">
+
+                    <i class="bi bi-truck mt-4"></i>
+
+                    <h4 class="mt-3">Home Delivery</h4>
+
+                    <p>
+                        Convenient delivery of your selected
+                        healthcare products.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="service-card">
+
+                    <img src="healthcare.jpg">
+
+                    <i class="bi bi-capsule mt-4"></i>
+
+                    <h4 class="mt-3">Healthcare Products</h4>
+
+                    <p>
+                        Everyday medical and wellness products
+                        in one place.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="service-card">
+
+                    <img src="first-aid.jpg">
+
+                    <i class="bi bi-bandaid mt-4"></i>
+
+                    <h4 class="mt-3">First Aid</h4>
+
+                    <p>
+                        First-aid kits and basic healthcare
+                        supplies.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="service-card">
+
+                    <img src="baby-care.jpg">
+
+                    <i class="bi bi-person-heart mt-4"></i>
+
+                    <h4 class="mt-3">Baby Care</h4>
+
+                    <p>
+                        Everyday baby care and hygiene products.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="service-card">
+
+                    <img src="wellness.jpg">
+
+                    <i class="bi bi-heart-pulse mt-4"></i>
+
+                    <h4 class="mt-3">Wellness</h4>
+
+                    <p>
+                        Vitamins and wellness products for
+                        everyday needs.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="service-card">
+
+                    <img src="medical-products.jpg">
+
+                    <i class="bi bi-thermometer-half mt-4"></i>
+
+                    <h4 class="mt-3">Health Devices</h4>
+
+                    <p>
+                        Health monitoring devices and
+                        medical accessories.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <h4>CarePlus</h4>
+
+                <p>Your trusted medical store.</p>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h4>Quick Links</h4>
+
+                <a href="index.html">Home</a>
+                <a href="products.html">Medicines</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h4>Follow Us</h4>
+
+                <div class="social-icons">
+
+                    <a href="https://www.facebook.com/">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="https://x.com/">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="text-center mb-0">
+            © 2026 CarePlus Medical Store
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    function toggleMenu() {
+
+        document.getElementById("navLinks")
+                .classList.toggle("show");
+
+    }
+
+</script>
+
+</body>
+
+</html>

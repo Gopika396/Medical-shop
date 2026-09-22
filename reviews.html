@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Reviews - CarePlus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f8f7;
+        }
+
+        .navbar {
+            background: #16423c;
+            padding: 15px 25px;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .navbar-nav {
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: #d9eeeb !important;
+        }
+
+        .navbar-toggler {
+            background: white;
+        }
+
+        .page-header {
+            margin-top: 45px;
+            background: #dcefeb;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: #16423c;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 60px 20px;
+        }
+
+        .review-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .stars {
+            color: #e3a72f;
+            font-size: 20px;
+        }
+
+        .review-form {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+        }
+
+        .btn-main {
+            background: #36a58c;
+            color: white;
+            border: none;
+        }
+
+        .btn-main:hover {
+            background: #27816f;
+            color: white;
+        }
+
+        footer {
+            background: #16423c;
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #d9eeeb;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            font-size: 23px;
+            margin-right: 12px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="index.html">CarePlus</a>
+
+        <button class="navbar-toggler"
+                type="button"
+                onclick="toggleMenu()">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navLinks">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Medicines</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="order.html">Order</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">Cart</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="reviews.html">Reviews</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<section class="page-header">
+
+    <h1>Customer Reviews</h1>
+
+    <p>See what our customers say.</p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="review-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p class="mt-3">
+                        "The website is easy to use and
+                        ordering products was simple."
+                    </p>
+
+                    <h5>Priya</h5>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="review-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p class="mt-3">
+                        "Good collection of healthcare
+                        and wellness products."
+                    </p>
+
+                    <h5>Jothika</h5>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="review-card">
+
+                    <div class="stars">
+                        ★★★★☆
+                    </div>
+
+                    <p class="mt-3">
+                        "The ordering process is convenient
+                        and straightforward."
+                    </p>
+
+                    <h5>Gopika</h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section bg-white">
+
+    <div class="review-form">
+
+        <h2 class="text-center mb-4">
+            Write a Review
+        </h2>
+
+        <form onsubmit="submitReview(event)">
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Your Name
+                </label>
+
+                <input type="text"
+                       id="reviewName"
+                       class="form-control"
+                       required>
+
+            </div>
+
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Your Review
+                </label>
+
+                <textarea id="reviewText"
+                          class="form-control"
+                          rows="4"
+                          required></textarea>
+
+            </div>
+
+
+            <button class="btn btn-main w-100">
+                Submit Review
+            </button>
+
+        </form>
+
+        <p id="reviewMessage"
+           class="text-center mt-3">
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <h4>CarePlus</h4>
+
+                <p>Your trusted medical store.</p>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h4>Quick Links</h4>
+
+                <a href="index.html">Home</a>
+                <a href="products.html">Medicines</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h4>Follow Us</h4>
+
+                <div class="social-icons">
+
+                    <a href="https://www.facebook.com/">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="https://x.com/">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="text-center mb-0">
+            © 2026 CarePlus Medical Store
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    function toggleMenu() {
+
+        document.getElementById("navLinks")
+                .classList.toggle("show");
+
+    }
+
+
+    function submitReview(event) {
+
+        event.preventDefault();
+
+        let name =
+            document.getElementById("reviewName").value;
+
+        let review =
+            document.getElementById("reviewText").value;
+
+        document.getElementById("reviewMessage").innerHTML =
+            "Thank you <strong>" + name +
+            "</strong> for your review!";
+
+        console.log("New review: " + review);
+
+        window.alert("Thank you for your review!");
+
+    }
+
+</script>
+
+</body>
+
+</html>

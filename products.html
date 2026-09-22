@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Medicines - CarePlus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f8f7;
+        }
+
+        .navbar {
+            background: #16423c;
+            padding: 15px 25px;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .navbar-nav {
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: #d9eeeb !important;
+        }
+
+        .nav-link:hover {
+            color: white !important;
+        }
+
+        .navbar-toggler {
+            background: white;
+        }
+
+        .page-header {
+            margin-top: 45px;
+            background: #dcefeb;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: #16423c;
+            font-weight: bold;
+        }
+
+        .products-section {
+            padding: 60px 20px;
+        }
+
+        .product-card {
+            background: white;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .product-card .card-body {
+            padding: 22px;
+            text-align: center;
+        }
+
+        .product-card h5 {
+            color: #16423c;
+            font-weight: bold;
+        }
+
+        .price {
+            color: #27816f;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .btn-main {
+            background: #36a58c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+        }
+
+        .btn-main:hover {
+            background: #27816f;
+            color: white;
+        }
+
+        footer {
+            background: #16423c;
+            color: white;
+            padding: 45px 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        footer h5 {
+            margin-bottom: 15px;
+        }
+
+        footer a {
+            color: #d9eeeb;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            font-size: 23px;
+            margin-right: 12px;
+        }
+
+        @media (max-width: 800px) {
+
+            .navbar-nav {
+                gap: 0;
+                margin-top: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="index.html">
+            CarePlus
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                onclick="toggleMenu()">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse"
+             id="navLinks">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">
+                        Medicines
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">
+                        Services
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="order.html">
+                        Order
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#"
+                       onclick="openCart(); return false;">
+
+                        Cart (<span id="cartCount">0</span>)
+
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="reviews.html">
+                        Reviews
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<section class="page-header">
+
+    <h1>Our Medicines & Products</h1>
+
+    <p>
+        Quality healthcare products for your everyday needs.
+    </p>
+
+</section>
+
+
+<section class="products-section">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="product-card">
+
+                    <img src="medicines.jpg"
+                         alt="Pain Relief Tablets">
+
+                    <div class="card-body">
+
+                        <h5>Pain Relief Tablets</h5>
+
+                        <p>
+                            Fast and effective relief for common pain.
+                        </p>
+
+                        <p class="price">
+                            ₹120
+                        </p>
+
+                        <button class="btn btn-main"
+                                onclick="addToCart('Pain Relief Tablets', 120)">
+
+                            <i class="bi bi-cart-plus"></i>
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="product-card">
+
+                    <img src="vitamins.jpg"
+                         alt="Vitamin Supplements">
+
+                    <div class="card-body">
+
+                        <h5>Vitamin Supplements</h5>
+
+                        <p>
+                            Daily nutritional support for your body.
+                        </p>
+
+                        <p class="price">
+                            ₹250
+                        </p>
+
+                        <button class="btn btn-main"
+                                onclick="addToCart('Vitamin Supplements', 250)">
+
+                            <i class="bi bi-cart-plus"></i>
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="product-card">
+
+                    <img src="first-aid.jpg"
+                         alt="First Aid Kit">
+
+                    <div class="card-body">
+
+                        <h5>First Aid Kit</h5>
+
+                        <p>
+                            Essential items for minor injuries.
+                        </p>
+
+                        <p class="price">
+                            ₹350
+                        </p>
+
+                        <button class="btn btn-main"
+                                onclick="addToCart('First Aid Kit', 350)">
+
+                            <i class="bi bi-cart-plus"></i>
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="product-card">
+
+                    <img src="thermometer.jpg"
+                         alt="Digital Thermometer">
+
+                    <div class="card-body">
+
+                        <h5>Digital Thermometer</h5>
+
+                        <p>
+                            Accurate temperature measurement.
+                        </p>
+
+                        <p class="price">
+                            ₹500
+                        </p>
+
+                        <button class="btn btn-main"
+                                onclick="addToCart('Digital Thermometer', 500)">
+
+                            <i class="bi bi-cart-plus"></i>
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="product-card">
+
+                    <img src="bp-monitor.jpg"
+                         alt="Blood Pressure Monitor">
+
+                    <div class="card-body">
+
+                        <h5>Blood Pressure Monitor</h5>
+
+                        <p>
+                            Easy-to-use home BP monitoring device.
+                        </p>
+
+                        <p class="price">
+                            ₹1200
+                        </p>
+
+                        <button class="btn btn-main"
+                                onclick="addToCart('Blood Pressure Monitor', 1200)">
+
+                            <i class="bi bi-cart-plus"></i>
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="product-card">
+
+                    <img src="oximeter.jpg"
+                         alt="Pulse Oximeter">
+
+                    <div class="card-body">
+
+                        <h5>Pulse Oximeter</h5>
+
+                        <p>
+                            Compact device for oxygen monitoring.
+                        </p>
+
+                        <p class="price">
+                            ₹800
+                        </p>
+
+                        <button class="btn btn-main"
+                                onclick="addToCart('Pulse Oximeter', 800)">
+
+                            <i class="bi bi-cart-plus"></i>
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="product-card">
+
+                    <img src="baby-care.jpg"
+                         alt="Baby Care Products">
+
+                    <div class="card-body">
+
+                        <h5>Baby Care Products</h5>
+
+                        <p>
+                            Gentle healthcare products for babies.
+                        </p>
+
+                        <p class="price">
+                            ₹450
+                        </p>
+
+                        <button class="btn btn-main"
+                                onclick="addToCart('Baby Care Products', 450)">
+
+                            <i class="bi bi-cart-plus"></i>
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="product-card">
+
+                    <img src="personal-care.jpg"
+                         alt="Personal Care Products">
+
+                    <div class="card-body">
+
+                        <h5>Personal Care Products</h5>
+
+                        <p>
+                            Everyday personal hygiene essentials.
+                        </p>
+
+                        <p class="price">
+                            ₹300
+                        </p>
+
+                        <button class="btn btn-main"
+                                onclick="addToCart('Personal Care Products', 300)">
+
+                            <i class="bi bi-cart-plus"></i>
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="product-card">
+
+                    <img src="medical-essentials.jpg"
+                         alt="Medical Essentials">
+
+                    <div class="card-body">
+
+                        <h5>Medical Essentials</h5>
+
+                        <p>
+                            Useful healthcare essentials for home.
+                        </p>
+
+                        <p class="price">
+                            ₹600
+                        </p>
+
+                        <button class="btn btn-main"
+                                onclick="addToCart('Medical Essentials', 600)">
+
+                            <i class="bi bi-cart-plus"></i>
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="container">
+
+        <div class="row text-center text-md-start">
+
+
+            <div class="col-md-4 mb-4">
+
+                <h5>CarePlus</h5>
+
+                <p>
+                    Your trusted healthcare partner for
+                    medicines and healthcare essentials.
+                </p>
+
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+
+                <h5>Quick Links</h5>
+
+                <a href="index.html">Home</a>
+                <a href="products.html">Medicines</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+
+                <h5>Follow Us</h5>
+
+                <div class="social-icons">
+
+                    <a href="https://www.facebook.com/">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="https://x.com/">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    let cart = [];
+
+
+    function toggleMenu() {
+
+        document.getElementById("navLinks")
+                .classList.toggle("show");
+
+    }
+
+
+    function addToCart(name, price) {
+
+        cart.push({
+            name: name,
+            price: price
+        });
+
+        document.getElementById("cartCount").innerHTML =
+            cart.length;
+
+        console.log("Added to cart: " + name);
+
+        window.alert(
+            name + " has been added to your cart!"
+        );
+
+    }
+
+
+    function openCart() {
+
+        if (cart.length === 0) {
+
+            window.location.href = "cart.html";
+
+            return;
+
+        }
+
+
+        let items = cart.map(function(item) {
+
+            return encodeURIComponent(item.name)
+                   + "|"
+                   + encodeURIComponent(item.price);
+
+        }).join(",");
+
+
+        window.location.href =
+            "cart.html?items=" + items;
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

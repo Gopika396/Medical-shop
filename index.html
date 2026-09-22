@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CarePlus Medical Store</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f8f7;
+            color: #263238;
+        }
+
+        .navbar {
+            background: #16423c;
+            padding: 15px 25px;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .navbar-nav {
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: #d9eeeb !important;
+        }
+
+        .nav-link:hover {
+            color: white !important;
+        }
+
+        .navbar-toggler {
+            background: white;
+        }
+
+        .hero {
+            margin-top: 45px;
+            min-height: 560px;
+            background:
+                linear-gradient(rgba(0, 50, 45, 0.55),
+                rgba(0, 50, 45, 0.55)),
+                url("medical-hero.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.7;
+        }
+
+        .btn-main {
+            background: #36a58c;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+        }
+
+        .btn-main:hover {
+            background: #27816f;
+            color: white;
+        }
+
+        .section {
+            padding: 70px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            color: #16423c;
+            font-weight: bold;
+        }
+
+        .info-card {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            height: 100%;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .info-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .info-card i {
+            font-size: 45px;
+            color: #36a58c;
+        }
+
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-card img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        footer {
+            background: #16423c;
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #d9eeeb;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            font-size: 23px;
+            margin-right: 12px;
+        }
+
+        @media (max-width: 800px) {
+
+            .hero {
+                margin-top: 25px;
+                min-height: 500px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="index.html">
+            CarePlus
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                onclick="toggleMenu()">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse"
+             id="navLinks">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Medicines</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="order.html">Order</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">
+                        Cart (<span id="cartCount">0</span>)
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="reviews.html">Reviews</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <h1>Your Health, Our Priority</h1>
+
+        <p>
+            Welcome to CarePlus Medical Store
+        </p>
+
+        <p>
+            Quality healthcare products, wellness essentials
+            and everyday medical supplies in one place.
+        </p>
+
+        <a href="products.html"
+           class="btn btn-main">
+            Explore Products
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>Why Choose CarePlus?</h2>
+
+        <p>Healthcare made simple and convenient.</p>
+
+    </div>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="info-card">
+
+                    <i class="bi bi-shield-check"></i>
+
+                    <h4 class="mt-3">Trusted Products</h4>
+
+                    <p>
+                        Quality healthcare and wellness products
+                        for your everyday needs.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="info-card">
+
+                    <i class="bi bi-cart-check"></i>
+
+                    <h4 class="mt-3">Easy Ordering</h4>
+
+                    <p>
+                        Browse products and add your required
+                        items to the shopping cart.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="info-card">
+
+                    <i class="bi bi-heart-pulse"></i>
+
+                    <h4 class="mt-3">Healthcare Essentials</h4>
+
+                    <p>
+                        Find wellness, first-aid and personal
+                        healthcare products.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section bg-white">
+
+    <div class="section-title">
+
+        <h2>Popular Products</h2>
+
+    </div>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="card product-card">
+
+                    <img src="medicines.jpg"
+                         class="card-img-top">
+
+                    <div class="card-body text-center">
+
+                        <h5>Medicines</h5>
+
+                        <p>Everyday healthcare essentials.</p>
+
+                        <a href="products.html"
+                           class="btn btn-main">
+                            View Products
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card product-card">
+
+                    <img src="vitamins.jpg"
+                         class="card-img-top">
+
+                    <div class="card-body text-center">
+
+                        <h5>Vitamins</h5>
+
+                        <p>Wellness and supplement products.</p>
+
+                        <a href="products.html"
+                           class="btn btn-main">
+                            View Products
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card product-card">
+
+                    <img src="first-aid.jpg"
+                         class="card-img-top">
+
+                    <div class="card-body text-center">
+
+                        <h5>First Aid</h5>
+
+                        <p>Useful products for your first-aid kit.</p>
+
+                        <a href="products.html"
+                           class="btn btn-main">
+                            View Products
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <h4>CarePlus</h4>
+
+                <p>
+                    Your trusted destination for everyday
+                    healthcare and wellness products.
+                </p>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h4>Quick Links</h4>
+
+                <a href="index.html">Home</a>
+                <a href="products.html">Medicines</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h4>Follow Us</h4>
+
+                <div class="social-icons">
+
+                    <a href="https://www.facebook.com/">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="https://x.com/">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                </div>
+
+                <p class="mt-3">
+                    Bengaluru, Karnataka
+                </p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="text-center mb-0">
+            © 2026 CarePlus Medical Store
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    function toggleMenu() {
+
+        document.getElementById("navLinks")
+                .classList.toggle("show");
+
+    }
+
+    console.log("CarePlus Home Page Loaded");
+
+</script>
+
+</body>
+
+</html>
